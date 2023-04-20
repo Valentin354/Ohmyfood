@@ -1,0 +1,20 @@
+#search {
+  @include flexbox-center;
+  text-align: center;
+  flex-direction: column;
+  background-color: $backgroudSecondaryColor;
+  padding-bottom: 57px;
+  h2 {
+    margin-top: 39.5px;
+    font-weight: 700;
+    font-size: 24px;
+    height: 68px;
+    width: 275px;
+  }
+
+  p {
+    font-weight: 300;
+    font-size: 18px;
+    margin-bottom: 27px;
+  }
+}

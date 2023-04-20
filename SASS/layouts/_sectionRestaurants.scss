@@ -1,0 +1,35 @@
+#restaurants {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    background-color: #F6F6F6;
+    padding-top: 10px;
+    padding-bottom: 60px;
+}
+
+.restaurants__cards {
+    @include flexbox-center;
+    @include flexbox-column;
+    gap: 20px;
+    width: 100%;
+}
+
+.restaurant__card {
+    @include flexbox-column;
+    width: 346px;
+    border-radius: 15px 15px 15px 15px;
+    background-color: #FFF;
+}
+
+.restaurant__card img {
+    width: 100%;
+    border-radius: 15px 15px 0px 0px;
+    object-fit: cover;
+    height: 174px;
+}
+
+.restaurant__block {
+    @include flexbox-column;
+    width: 100%;
+}
