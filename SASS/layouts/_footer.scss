@@ -1,0 +1,23 @@
+footer {
+  background-color: $backgroudFooter;
+  color: white;
+  a {
+    color: white;
+  }
+  h2 {
+    font-family: "Shrikhand", "sans-serif";
+    font-weight: 400;
+    font-size: 18px;
+    font-style: italic;
+    padding: 22px 25px 16px;
+  }
+  p {
+    padding-bottom: 7px ;
+    padding-left: 25px;
+  }
+  
+  i {
+    padding-right: 11px;
+    
+  }
+}
