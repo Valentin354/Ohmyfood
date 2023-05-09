@@ -1,0 +1,177 @@
+img {
+  max-height: 500px;
+  width: 100%;
+  object-fit: cover;
+}
+
+header {
+  position: relative;
+  i {
+    position: absolute;
+    top: 23px;
+    left: 23px;
+  }
+}
+
+.menu_title {
+  margin: auto;
+  max-width: 1055px;
+  position: relative;
+  background-color: $backgroudSecondaryColor;
+  border-radius: 40px 40px 0px 0px;
+  margin-top: -42px;
+  h2 {
+    font-family: "Shrikhand", "sans-serif";
+    font-style: italic;
+    font-weight: 400;
+    font-size: 28px;
+    padding-left: 17px;
+    padding-top: 31px;
+  }
+  i {
+    position: absolute;
+    font-size: 21px;
+    top: 42px;
+    left: 300px;
+  }
+  .fa-solid {
+    color: transparent;
+    background-image: linear-gradient(
+      193.33deg,
+      #9356dc -11.44%,
+      #ff79da 123.93%
+    );
+    background-clip: text;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+  }
+  &:hover .fa-solid {
+    opacity: 1;
+  }
+}
+
+.menu__steps {
+  margin: auto;
+  max-width: 1055px;
+  background-color: $backgroudSecondaryColor;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  h3 {
+    font-weight: 300;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-top: 40px;
+    padding-left: 13px;
+  }
+  h3::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: $thirdColor;
+  }
+  .step-1 {
+    animation: appear 0.5s linear;
+    @keyframes appear {
+      0% {
+        transform: scale(0);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+  }
+  .step-2 {
+    animation: appear 1s linear;
+    @keyframes appear {
+      0% {
+        transform: scale(0);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+  }
+  .step-3 {
+    animation: appear 1.5s linear;
+    @keyframes appear {
+      0% {
+        transform: scale(0);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+  }
+
+  .menu__step {
+    overflow: hidden;
+    .menu__choice {
+      display: flex;
+      flex-direction: row;
+      background-color: white;
+      height: 69px;
+      box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+      margin: 12px 13px;
+      border-radius: 15px;
+      overflow: hidden;
+
+      .menu__description {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        h4 {
+          font-weight: 500;
+          font-size: 18px;
+          padding-top: 12px;
+          padding-left: 15px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        .menu__description--p {
+          padding-top: 5px;
+          padding-left: 15px;
+          font-weight: 300;
+          font-size: 15px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+
+      .price {
+        align-self: flex-end;
+        margin-left: auto;
+        margin-right: 16px;
+        padding-bottom: 13.5px;
+        font-weight: 700;
+        font-size: 15px;
+        color: $backgroudFooter;
+      }
+      .menu__decription--confirmation {
+        @include flexbox-center;
+        background-color: $thirdColor;
+        border-radius: 0px 15px 15px 0px;
+        width: 59px;
+        margin-right: -59px;
+        transition: all 0.5s ease-in-out;
+        i {
+          color: white;
+          font-size: 20px;
+        }
+      }
+      &:hover .menu__decription--confirmation {
+        margin-right: 0;
+      }
+    }
+  }
+
+  button {
+    margin: 40px auto;
+  }
+}
+
+// white-space: nowrap;
+//text-overflow: ellipsis;
+// overflow: hidden;
