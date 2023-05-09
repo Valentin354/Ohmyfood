@@ -1,6 +1,7 @@
 footer {
   background-color: $backgroudFooter;
   color: white;
+  padding-bottom: 22px;
   a {
     color: white;
   }
@@ -12,12 +13,11 @@ footer {
     padding: 22px 25px 16px;
   }
   p {
-    padding-bottom: 7px ;
+    padding-bottom: 7px;
     padding-left: 25px;
   }
-  
+
   i {
     padding-right: 11px;
-    
   }
 }

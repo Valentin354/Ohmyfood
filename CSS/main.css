@@ -26,7 +26,7 @@ h2 {
 }
 
 .button--One {
-  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
+  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 25px;
   width: 218px;
@@ -35,11 +35,12 @@ h2 {
   color: white;
   font-size: 16px;
   font-weight: 500;
+  transition: 0.5s ease-in-out;
 }
 .button--One:hover {
   transform: scale(1.1);
-  transition: 150ms;
   opacity: 0.8;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
 }
 
 h1 {
@@ -79,12 +80,22 @@ h1 {
   background-color: #f7f7f7;
   padding-bottom: 57px;
 }
+@media (min-width: 1000px) {
+  #search {
+    padding-bottom: 30px;
+  }
+}
 #search h2 {
   margin-top: 39.5px;
   font-weight: 700;
   font-size: 24px;
   height: 68px;
   width: 275px;
+}
+@media (min-width: 1000px) {
+  #search h2 {
+    width: auto;
+  }
 }
 #search p {
   font-weight: 300;
@@ -95,8 +106,15 @@ h1 {
 #process {
   margin-bottom: 68px;
 }
+@media (min-width: 1000px) {
+  #process {
+    padding-left: 180px;
+    padding-right: 180px;
+    margin-bottom: 50px;
+  }
+}
 #process .process__title {
-  margin: 48px 20px 26px;
+  margin: 50px 20px 26px;
 }
 #process .process__steps {
   display: flex;
@@ -106,6 +124,11 @@ h1 {
   flex-direction: column;
   gap: 24.92px;
   margin-top: 26px;
+}
+@media (min-width: 1000px) {
+  #process .process__steps {
+    flex-direction: row;
+  }
 }
 #process .process__steps .process__step {
   display: flex;
@@ -117,6 +140,12 @@ h1 {
   width: 322.49px;
   height: 72.38px;
   position: relative;
+}
+#process .process__steps .process__step:hover {
+  background-color: #f5edff;
+}
+#process .process__steps .process__step:hover i {
+  color: #9356dc;
 }
 #process .process__steps .process__numbers {
   color: white;
@@ -130,6 +159,7 @@ h1 {
 #process .process__steps .process__icon {
   margin-left: 38px;
   margin-right: 23px;
+  color: #7e7e7e;
 }
 
 #restaurants {
@@ -189,10 +219,22 @@ h1 {
   right: 25px;
   top: 23px;
 }
+#restaurants .restaurants__cards .restaurant__card .fa-solid {
+  color: transparent;
+  background-image: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+#restaurants .restaurants__cards .restaurant__card:hover .fa-solid {
+  opacity: 1;
+}
 
 footer {
   background-color: #353535;
   color: white;
+  padding-bottom: 22px;
 }
 footer a {
   color: white;
@@ -210,4 +252,205 @@ footer p {
 }
 footer i {
   padding-right: 11px;
+}
+
+.loader {
+  position: fixed;
+  display: grid;
+  place-items: center;
+  font-size: 60px;
+  color: #9356dc;
+  background-color: white;
+  height: 100vh;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.9;
+  animation: disappear 0.2s 3s forwards;
+  transform-origin: top;
+}
+.loader i {
+  animation: spin 3s;
+}
+
+@keyframes disappear {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(720deg);
+  }
+}
+img {
+  max-height: 500px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+header {
+  position: relative;
+}
+header i {
+  position: absolute;
+  top: 23px;
+  left: 23px;
+}
+
+.menu_title {
+  margin: auto;
+  max-width: 1055px;
+  position: relative;
+  background-color: #f7f7f7;
+  border-radius: 40px 40px 0px 0px;
+  margin-top: -42px;
+}
+.menu_title h2 {
+  font-family: "Shrikhand", "sans-serif";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 28px;
+  padding-left: 17px;
+  padding-top: 31px;
+}
+.menu_title i {
+  position: absolute;
+  font-size: 21px;
+  top: 42px;
+  left: 300px;
+}
+.menu_title .fa-solid {
+  color: transparent;
+  background-image: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.menu_title:hover .fa-solid {
+  opacity: 1;
+}
+
+.menu__steps {
+  margin: auto;
+  max-width: 1055px;
+  background-color: #f7f7f7;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+.menu__steps h3 {
+  font-weight: 300;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-top: 40px;
+  padding-left: 13px;
+}
+.menu__steps h3::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #99e2d0;
+}
+.menu__steps .step-1 {
+  animation: appear 0.5s linear;
+}
+@keyframes appear {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.menu__steps .step-2 {
+  animation: appear 1s linear;
+}
+@keyframes appear {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.menu__steps .step-3 {
+  animation: appear 1.5s linear;
+}
+@keyframes appear {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.menu__steps .menu__step {
+  overflow: hidden;
+}
+.menu__steps .menu__step .menu__choice {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  height: 69px;
+  box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+  margin: 12px 13px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.menu__steps .menu__step .menu__choice .menu__description {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.menu__steps .menu__step .menu__choice .menu__description h4 {
+  font-weight: 500;
+  font-size: 18px;
+  padding-top: 12px;
+  padding-left: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.menu__steps .menu__step .menu__choice .menu__description .menu__description--p {
+  padding-top: 5px;
+  padding-left: 15px;
+  font-weight: 300;
+  font-size: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.menu__steps .menu__step .menu__choice .price {
+  align-self: flex-end;
+  margin-left: auto;
+  margin-right: 16px;
+  padding-bottom: 13.5px;
+  font-weight: 700;
+  font-size: 15px;
+  color: #353535;
+}
+.menu__steps .menu__step .menu__choice .menu__decription--confirmation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99e2d0;
+  border-radius: 0px 15px 15px 0px;
+  width: 59px;
+  margin-right: -59px;
+  transition: all 0.5s ease-in-out;
+}
+.menu__steps .menu__step .menu__choice .menu__decription--confirmation i {
+  color: white;
+  font-size: 20px;
+}
+.menu__steps .menu__step .menu__choice:hover .menu__decription--confirmation {
+  margin-right: 0;
+}
+.menu__steps button {
+  margin: 40px auto;
 }/*# sourceMappingURL=main.css.map */

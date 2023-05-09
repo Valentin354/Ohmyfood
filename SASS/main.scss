@@ -17,11 +17,12 @@
 //layout
 @import "./layouts/header";
 @import "./layouts/sectionTitle";
-@import "./layouts/sectionSearch"; 
-@import"./layouts/sectionProcess";
-@import"./layouts/sectionRestaurants";
-@import"./layouts/footer";
+@import "./layouts/sectionSearch";
+@import "./layouts/sectionProcess";
+@import "./layouts/sectionRestaurants";
+@import "./layouts/footer";
+@import "./layouts/loader";
 
 //pages
-
+@import "./pages/restaurant-1";
 //thème

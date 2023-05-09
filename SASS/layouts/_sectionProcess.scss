@@ -1,7 +1,12 @@
 #process {
   margin-bottom: 68px;
+  @media (min-width: 1000px) {
+    padding-left: 180px;
+    padding-right: 180px;
+    margin-bottom: 50px;
+  }
   .process__title {
-    margin: 48px 20px 26px;
+    margin: 50px 20px 26px;
   }
 
   .process__steps {
@@ -9,6 +14,9 @@
     @include flexbox-column;
     gap: 24.92px;
     margin-top: 26px;
+    @media (min-width: 1000px) {
+      flex-direction: row;
+    }
 
     .process__step {
       @include flexbox-row;
@@ -19,6 +27,12 @@
       width: 322.49px;
       height: 72.38px;
       position: relative;
+      &:hover {
+        background-color: #f5edff;
+      }
+      &:hover i {
+        color: $primaryColor;
+      }
     }
     .process__numbers {
       color: white;
@@ -32,6 +46,7 @@
     .process__icon {
       margin-left: 38px;
       margin-right: 23px;
+      color: #7e7e7e;
     }
   }
 }
