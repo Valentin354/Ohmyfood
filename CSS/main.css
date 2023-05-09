@@ -25,6 +25,14 @@ h2 {
   font-weight: 700;
 }
 
+@media (min-width: 1000px) {
+  .container {
+    width: 1055px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .button--One {
   background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
@@ -108,8 +116,6 @@ h1 {
 }
 @media (min-width: 1000px) {
   #process {
-    padding-left: 180px;
-    padding-right: 180px;
     margin-bottom: 50px;
   }
 }
@@ -178,6 +184,12 @@ h1 {
   padding-right: 18px;
   padding-left: 18px;
 }
+@media (min-width: 1000px) {
+  #restaurants .restaurants__cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 50px 94px;
+  }
+}
 #restaurants .restaurants__cards .restaurant__card {
   background-color: white;
   min-width: 340px;
@@ -236,6 +248,19 @@ footer {
   color: white;
   padding-bottom: 22px;
 }
+@media (min-width: 768px) {
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+@media (min-width: 768px) {
+  footer .contain__footer {
+    display: flex;
+    flex-direction: row;
+    padding: 64px 25px 30px;
+  }
+}
 footer a {
   color: white;
 }
@@ -246,9 +271,19 @@ footer h2 {
   font-style: italic;
   padding: 22px 25px 16px;
 }
+@media (min-width: 768px) {
+  footer h2 {
+    padding: 57px 50px 30px;
+  }
+}
 footer p {
   padding-bottom: 7px;
   padding-left: 25px;
+}
+@media (min-width: 768px) {
+  footer p {
+    padding-bottom: 0;
+  }
 }
 footer i {
   padding-right: 11px;
@@ -301,6 +336,14 @@ header i {
   left: 23px;
 }
 
+@media (min-width: 1000px) {
+  .container-2 {
+    width: 634px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .menu_title {
   margin: auto;
   max-width: 1055px;
@@ -317,11 +360,23 @@ header i {
   padding-left: 17px;
   padding-top: 31px;
 }
+@media (min-width: 1000px) {
+  .menu_title h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .menu_title i {
   position: absolute;
   font-size: 21px;
   top: 42px;
   left: 300px;
+}
+@media (min-width: 1000px) {
+  .menu_title i {
+    left: 693px;
+  }
 }
 .menu_title .fa-solid {
   color: transparent;

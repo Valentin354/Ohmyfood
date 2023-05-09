@@ -2,19 +2,38 @@ footer {
   background-color: $backgroudFooter;
   color: white;
   padding-bottom: 22px;
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .contain__footer {
+    @media (min-width: 768px) {
+      display: flex;
+      flex-direction: row;
+      padding: 64px 25px 30px;
+    }
+  }
   a {
     color: white;
   }
+
   h2 {
     font-family: "Shrikhand", "sans-serif";
     font-weight: 400;
     font-size: 18px;
     font-style: italic;
     padding: 22px 25px 16px;
+    @media (min-width: 768px) {
+      padding: 57px 50px 30px;
+    }
   }
   p {
     padding-bottom: 7px;
     padding-left: 25px;
+    @media (min-width: 768px) {
+      padding-bottom: 0;
+    }
   }
 
   i {

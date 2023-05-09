@@ -13,6 +13,14 @@ header {
   }
 }
 
+.container-2 {
+  @media (min-width: 1000px) {
+    width: 634px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .menu_title {
   margin: auto;
   max-width: 1055px;
@@ -20,6 +28,7 @@ header {
   background-color: $backgroudSecondaryColor;
   border-radius: 40px 40px 0px 0px;
   margin-top: -42px;
+
   h2 {
     font-family: "Shrikhand", "sans-serif";
     font-style: italic;
@@ -27,12 +36,18 @@ header {
     font-size: 28px;
     padding-left: 17px;
     padding-top: 31px;
+    @media (min-width: 1000px) {
+      @include flexbox-center;
+    }
   }
   i {
     position: absolute;
     font-size: 21px;
     top: 42px;
     left: 300px;
+    @media (min-width: 1000px) {
+      left: 693px;
+    }
   }
   .fa-solid {
     color: transparent;
