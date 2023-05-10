@@ -321,7 +321,7 @@ footer i {
   }
 }
 img {
-  max-height: 500px;
+  max-height: 350px;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
