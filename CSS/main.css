@@ -239,7 +239,7 @@ h1 {
   opacity: 0;
   transition: all 0.5s ease-in-out;
 }
-#restaurants .restaurants__cards .restaurant__card:hover .fa-solid {
+#restaurants .restaurants__cards .restaurant__card .fa-solid:hover {
   opacity: 1;
 }
 
